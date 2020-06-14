@@ -3,19 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FB5D5202494B81600BEC3F5 /* RoundUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D51F2494B81600BEC3F5 /* RoundUIButton.swift */; };
+		2FB5D5222494E7BF00BEC3F5 /* CacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5212494E7BF00BEC3F5 /* CacheViewController.swift */; };
+		2FB5D524249523B300BEC3F5 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D523249523B300BEC3F5 /* RootViewController.swift */; };
+		2FB5D5282495266600BEC3F5 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5272495266600BEC3F5 /* WelcomViewController.swift */; };
+		2FB5D52A2495277600BEC3F5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5292495277600BEC3F5 /* LoginViewController.swift */; };
+		2FB5D52C249527AC00BEC3F5 /* LoginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D52B249527AC00BEC3F5 /* LoginUpViewController.swift */; };
+		2FB5D52E249527E300BEC3F5 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D52D249527E300BEC3F5 /* MainTabViewController.swift */; };
+		2FB5D5312495DE7100BEC3F5 /* ZLWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5302495DE7100BEC3F5 /* ZLWindow.swift */; };
+		2FB5D5342495FAF300BEC3F5 /* HttpDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5332495FAF300BEC3F5 /* HttpDatas.swift */; };
+		2FB5D53B249617E200BEC3F5 /* ZLWXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D53A249617E200BEC3F5 /* ZLWXViewController.swift */; };
+		2FB5D5402496181A00BEC3F5 /* ZLMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D53F2496181A00BEC3F5 /* ZLMineViewController.swift */; };
+		2FB5D5422496182D00BEC3F5 /* ZLDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5412496182D00BEC3F5 /* ZLDiscoverViewController.swift */; };
+		2FB5D5442496183A00BEC3F5 /* ZLContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5432496183A00BEC3F5 /* ZLContactViewController.swift */; };
+		2FB5D547249654BA00BEC3F5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D546249654BA00BEC3F5 /* LoginView.swift */; };
 		2FF89273248FE61F00F9C9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF89272248FE61F00F9C9D0 /* AppDelegate.swift */; };
 		2FF89275248FE61F00F9C9D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF89274248FE61F00F9C9D0 /* SceneDelegate.swift */; };
 		2FF89277248FE61F00F9C9D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF89276248FE61F00F9C9D0 /* ViewController.swift */; };
 		2FF8927A248FE61F00F9C9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF89278248FE61F00F9C9D0 /* Main.storyboard */; };
 		2FF8927C248FE62000F9C9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8927B248FE62000F9C9D0 /* Assets.xcassets */; };
 		2FF8927F248FE62000F9C9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF8927D248FE62000F9C9D0 /* LaunchScreen.storyboard */; };
+		2FF8928824926C9E00F9C9D0 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8928724926C9E00F9C9D0 /* People.swift */; };
+		2FF8928A24926CFD00F9C9D0 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8928924926CFD00F9C9D0 /* PeopleViewModel.swift */; };
+		2FF8928C24926DD500F9C9D0 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8928B24926DD500F9C9D0 /* PeopleViewController.swift */; };
+		2FF8928F24928F8400F9C9D0 /* RoundTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF8928E24928F8400F9C9D0 /* RoundTextFiled.swift */; };
+		A8F5D744806152A0CE748264 /* Pods_ZLTodoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F436046CECB19F53CD6A87 /* Pods_ZLTodoList.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A5A4B6D0660F498DD9E452C /* Pods-ZLTodoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLTodoList.debug.xcconfig"; path = "Target Support Files/Pods-ZLTodoList/Pods-ZLTodoList.debug.xcconfig"; sourceTree = "<group>"; };
+		2FB5D51F2494B81600BEC3F5 /* RoundUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIButton.swift; sourceTree = "<group>"; };
+		2FB5D5212494E7BF00BEC3F5 /* CacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheViewController.swift; sourceTree = "<group>"; };
+		2FB5D523249523B300BEC3F5 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2FB5D5272495266600BEC3F5 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
+		2FB5D5292495277600BEC3F5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2FB5D52B249527AC00BEC3F5 /* LoginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUpViewController.swift; sourceTree = "<group>"; };
+		2FB5D52D249527E300BEC3F5 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		2FB5D5302495DE7100BEC3F5 /* ZLWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLWindow.swift; sourceTree = "<group>"; };
+		2FB5D5332495FAF300BEC3F5 /* HttpDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpDatas.swift; sourceTree = "<group>"; };
+		2FB5D53A249617E200BEC3F5 /* ZLWXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLWXViewController.swift; sourceTree = "<group>"; };
+		2FB5D53F2496181A00BEC3F5 /* ZLMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMineViewController.swift; sourceTree = "<group>"; };
+		2FB5D5412496182D00BEC3F5 /* ZLDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLDiscoverViewController.swift; sourceTree = "<group>"; };
+		2FB5D5432496183A00BEC3F5 /* ZLContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLContactViewController.swift; sourceTree = "<group>"; };
+		2FB5D546249654BA00BEC3F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2FF8926F248FE61F00F9C9D0 /* ZLTodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLTodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF89272248FE61F00F9C9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FF89274248FE61F00F9C9D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +58,12 @@
 		2FF8927B248FE62000F9C9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FF8927E248FE62000F9C9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FF89280248FE62000F9C9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF8928724926C9E00F9C9D0 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		2FF8928924926CFD00F9C9D0 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		2FF8928B24926DD500F9C9D0 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		2FF8928E24928F8400F9C9D0 /* RoundTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextFiled.swift; sourceTree = "<group>"; };
+		48F436046CECB19F53CD6A87 /* Pods_ZLTodoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZLTodoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56C7ACF9F458CC411871831 /* Pods-ZLTodoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZLTodoList.release.xcconfig"; path = "Target Support Files/Pods-ZLTodoList/Pods-ZLTodoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +71,140 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F5D744806152A0CE748264 /* Pods_ZLTodoList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D90E626CC6E932E21C50393 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A5A4B6D0660F498DD9E452C /* Pods-ZLTodoList.debug.xcconfig */,
+				E56C7ACF9F458CC411871831 /* Pods-ZLTodoList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2FB5D525249525EC00BEC3F5 /* IndexPage */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D5272495266600BEC3F5 /* WelcomViewController.swift */,
+			);
+			path = IndexPage;
+			sourceTree = "<group>";
+		};
+		2FB5D526249525F600BEC3F5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D538249617A900BEC3F5 /* 我 */,
+				2FB5D537249617A200BEC3F5 /* 发现 */,
+				2FB5D5362496179800BEC3F5 /* 通讯录 */,
+				2FB5D5352496178B00BEC3F5 /* 微信 */,
+				2FB5D5292495277600BEC3F5 /* LoginViewController.swift */,
+				2FB5D52B249527AC00BEC3F5 /* LoginUpViewController.swift */,
+				2FB5D52D249527E300BEC3F5 /* MainTabViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2FB5D52F2495DE5500BEC3F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D5302495DE7100BEC3F5 /* ZLWindow.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2FB5D5322495FACD00BEC3F5 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D5332495FAF300BEC3F5 /* HttpDatas.swift */,
+			);
+			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		2FB5D5352496178B00BEC3F5 /* 微信 */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D539249617B000BEC3F5 /* Controllers */,
+			);
+			path = "微信";
+			sourceTree = "<group>";
+		};
+		2FB5D5362496179800BEC3F5 /* 通讯录 */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D53C249617FA00BEC3F5 /* Contaoller */,
+			);
+			path = "通讯录";
+			sourceTree = "<group>";
+		};
+		2FB5D537249617A200BEC3F5 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D53D2496180500BEC3F5 /* Contaoller */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		2FB5D538249617A900BEC3F5 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D5452496549F00BEC3F5 /* Views */,
+				2FB5D53E2496180A00BEC3F5 /* Contaoller */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		2FB5D539249617B000BEC3F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D53A249617E200BEC3F5 /* ZLWXViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2FB5D53C249617FA00BEC3F5 /* Contaoller */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D5432496183A00BEC3F5 /* ZLContactViewController.swift */,
+			);
+			path = Contaoller;
+			sourceTree = "<group>";
+		};
+		2FB5D53D2496180500BEC3F5 /* Contaoller */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D5412496182D00BEC3F5 /* ZLDiscoverViewController.swift */,
+			);
+			path = Contaoller;
+			sourceTree = "<group>";
+		};
+		2FB5D53E2496180A00BEC3F5 /* Contaoller */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D53F2496181A00BEC3F5 /* ZLMineViewController.swift */,
+			);
+			path = Contaoller;
+			sourceTree = "<group>";
+		};
+		2FB5D5452496549F00BEC3F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2FB5D546249654BA00BEC3F5 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2FF89266248FE61F00F9C9D0 = {
 			isa = PBXGroup;
 			children = (
 				2FF89271248FE61F00F9C9D0 /* ZLTodoList */,
 				2FF89270248FE61F00F9C9D0 /* Products */,
+				1D90E626CC6E932E21C50393 /* Pods */,
+				D98F10D303B376CE99CBC8CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +219,12 @@
 		2FF89271248FE61F00F9C9D0 /* ZLTodoList */ = {
 			isa = PBXGroup;
 			children = (
+				2FB5D5322495FACD00BEC3F5 /* 网络请求 */,
+				2FB5D52F2495DE5500BEC3F5 /* Utils */,
+				2FB5D526249525F600BEC3F5 /* Main */,
+				2FB5D525249525EC00BEC3F5 /* IndexPage */,
+				2FF8928D24928F6600F9C9D0 /* Views */,
+				2FF8928624926C7E00F9C9D0 /* table */,
 				2FF89272248FE61F00F9C9D0 /* AppDelegate.swift */,
 				2FF89274248FE61F00F9C9D0 /* SceneDelegate.swift */,
 				2FF89276248FE61F00F9C9D0 /* ViewController.swift */,
@@ -63,8 +232,37 @@
 				2FF8927B248FE62000F9C9D0 /* Assets.xcassets */,
 				2FF8927D248FE62000F9C9D0 /* LaunchScreen.storyboard */,
 				2FF89280248FE62000F9C9D0 /* Info.plist */,
+				2FB5D5212494E7BF00BEC3F5 /* CacheViewController.swift */,
+				2FB5D523249523B300BEC3F5 /* RootViewController.swift */,
 			);
 			path = ZLTodoList;
+			sourceTree = "<group>";
+		};
+		2FF8928624926C7E00F9C9D0 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				2FF8928724926C9E00F9C9D0 /* People.swift */,
+				2FF8928924926CFD00F9C9D0 /* PeopleViewModel.swift */,
+				2FF8928B24926DD500F9C9D0 /* PeopleViewController.swift */,
+			);
+			path = table;
+			sourceTree = "<group>";
+		};
+		2FF8928D24928F6600F9C9D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2FF8928E24928F8400F9C9D0 /* RoundTextFiled.swift */,
+				2FB5D51F2494B81600BEC3F5 /* RoundUIButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D98F10D303B376CE99CBC8CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48F436046CECB19F53CD6A87 /* Pods_ZLTodoList.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FF89283248FE62000F9C9D0 /* Build configuration list for PBXNativeTarget "ZLTodoList" */;
 			buildPhases = (
+				FF52FA5FA09D8E1122088A22 /* [CP] Check Pods Manifest.lock */,
 				2FF8926B248FE61F00F9C9D0 /* Sources */,
 				2FF8926C248FE61F00F9C9D0 /* Frameworks */,
 				2FF8926D248FE61F00F9C9D0 /* Resources */,
+				C796AC644BAAAA78E771A55E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +333,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C796AC644BAAAA78E771A55E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZLTodoList/Pods-ZLTodoList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZLTodoList/Pods-ZLTodoList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZLTodoList/Pods-ZLTodoList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF52FA5FA09D8E1122088A22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZLTodoList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2FF8926B248FE61F00F9C9D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB5D52A2495277600BEC3F5 /* LoginViewController.swift in Sources */,
+				2FB5D5202494B81600BEC3F5 /* RoundUIButton.swift in Sources */,
+				2FF8928824926C9E00F9C9D0 /* People.swift in Sources */,
 				2FF89277248FE61F00F9C9D0 /* ViewController.swift in Sources */,
+				2FB5D5282495266600BEC3F5 /* WelcomViewController.swift in Sources */,
+				2FB5D52E249527E300BEC3F5 /* MainTabViewController.swift in Sources */,
 				2FF89273248FE61F00F9C9D0 /* AppDelegate.swift in Sources */,
+				2FB5D5342495FAF300BEC3F5 /* HttpDatas.swift in Sources */,
+				2FB5D5422496182D00BEC3F5 /* ZLDiscoverViewController.swift in Sources */,
+				2FB5D524249523B300BEC3F5 /* RootViewController.swift in Sources */,
+				2FB5D52C249527AC00BEC3F5 /* LoginUpViewController.swift in Sources */,
+				2FB5D5222494E7BF00BEC3F5 /* CacheViewController.swift in Sources */,
+				2FB5D5312495DE7100BEC3F5 /* ZLWindow.swift in Sources */,
+				2FF8928A24926CFD00F9C9D0 /* PeopleViewModel.swift in Sources */,
 				2FF89275248FE61F00F9C9D0 /* SceneDelegate.swift in Sources */,
+				2FB5D547249654BA00BEC3F5 /* LoginView.swift in Sources */,
+				2FF8928F24928F8400F9C9D0 /* RoundTextFiled.swift in Sources */,
+				2FF8928C24926DD500F9C9D0 /* PeopleViewController.swift in Sources */,
+				2FB5D5442496183A00BEC3F5 /* ZLContactViewController.swift in Sources */,
+				2FB5D53B249617E200BEC3F5 /* ZLWXViewController.swift in Sources */,
+				2FB5D5402496181A00BEC3F5 /* ZLMineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +542,7 @@
 		};
 		2FF89284248FE62000F9C9D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A5A4B6D0660F498DD9E452C /* Pods-ZLTodoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +561,7 @@
 		};
 		2FF89285248FE62000F9C9D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56C7ACF9F458CC411871831 /* Pods-ZLTodoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
