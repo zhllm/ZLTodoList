@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var isFirstIn: Bool = false
+    var isFirstIn: Bool = true
     var isLogin = true
     
     

@@ -11,6 +11,8 @@ import UIKit
 /// 屏幕宽高
 let kScreenW = UIScreen.main.bounds.width
 let kScreenH = UIScreen.main.bounds.height
+let kScale = kScreenW / 375
+let kScaleY = kScreenH / (812 - 44 - 34)
 
 /// keyWindow
 let keyWindow = UIApplication.shared.connectedScenes
@@ -58,6 +60,24 @@ func customFont(font: CGFloat) -> UIFont {
     }
     
     return UIFont.systemFont(ofSize: font)
+}
+
+func customLayer(num: CGFloat) -> CGFloat {
+    /// 大于736
+    guard kScreenH <= 736 else {
+        return num * 1.3
+    }
+    
+    /// 小于736
+    guard kScreenH == 736 else {
+        return num * 1.1
+    }
+    
+    guard kScreenH >= 736 else {
+        return num
+    }
+    
+    return num * 1.2
 }
 
 

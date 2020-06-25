@@ -11,4 +11,5 @@ platform :ios, '8.0'
   pod 'RxCocoa', '~> 5.0'
   pod 'RealmSwift'
   pod 'SwiftyJSON'
+  pod 'MJRefresh'
 end

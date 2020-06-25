@@ -11,11 +11,12 @@ import UIKit
 class MainTabViewController: UITabBarController {
     
     var indexFlag = 0
-    
+    // ZLWXViewController
     private func addControllers(){
-        self.addChildControllers(ZLWXViewController(), title: "微信", image: "icons-facebook", selectImg: "icons-facebook")
+        self.addChildControllers(ZLWXMainViewController(), title: "微信", image: "icons-facebook", selectImg: "icons-facebook")
         self.addChildControllers(ZLContactViewController(), title: "通讯录", image: "icons-google", selectImg: "icons-google")
         self.addChildControllers(ZLDiscoverViewController(), title: "发现", image: "icons-twitter", selectImg: "icons-twitter")
+        self.addChildControllers(ZLMineViewController(), title: "我", image: "icons-facebook", selectImg: "icons-facebook")
         self.addChildControllers(ZLMineViewController(), title: "我", image: "icons-facebook", selectImg: "icons-facebook")
     }
     
@@ -61,8 +62,12 @@ class MainTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
         self.addControllers()
+
+        for (index, value) in UIFont.familyNames.enumerated() {
+            print("\(index) : --- \(value) \n")
+            // Avenir Montserrat iconfont
+        }
     }
     
 }

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - MJRefresh (3.4.1)
   - Realm (4.4.0):
     - Realm/Headers (= 4.4.0)
   - Realm/Headers (4.4.0)
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - MJRefresh
   - RealmSwift
   - RxCocoa (~> 5.0)
   - RxSwift (~> 5.0)
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - MJRefresh
     - Realm
     - RealmSwift
     - RxCocoa
@@ -35,6 +38,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  MJRefresh: 3153c59a363159092c08b2177ec3a7d09f90bfaf
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -43,6 +47,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 1d237ec7c447c4e46c61cf9c3d2dfc3ad0e7d221
+PODFILE CHECKSUM: b54514b4f1a813a8000eb5c6269dcb8e5fb69ccf
 
 COCOAPODS: 1.9.1
