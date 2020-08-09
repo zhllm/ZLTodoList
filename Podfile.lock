@@ -1,5 +1,7 @@
 PODS:
+  - AAInfographics (5.0.1)
   - Alamofire (4.9.1)
+  - Differentiator (4.0.1)
   - MJRefresh (3.4.1)
   - Realm (4.4.0):
     - Realm/Headers (= 4.4.0)
@@ -9,6 +11,10 @@ PODS:
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
@@ -16,10 +22,12 @@ PODS:
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
   - Alamofire (~> 4.0)
   - MJRefresh
   - RealmSwift
   - RxCocoa (~> 5.0)
+  - RxDataSources
   - RxSwift (~> 5.0)
   - SnapKit
   - SwiftyJSON
@@ -27,26 +35,40 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Differentiator
     - MJRefresh
     - Realm
     - RealmSwift
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - SnapKit
     - SwiftyJSON
 
+EXTERNAL SOURCES:
+  AAInfographics:
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+CHECKOUT OPTIONS:
+  AAInfographics:
+    :commit: 5bbc264ec405f1df363cee0256114ab956f94ae3
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
 SPEC CHECKSUMS:
+  AAInfographics: 4f95dfdeb1a1642ab26365b9b40b83693eb5b83d
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   MJRefresh: 3153c59a363159092c08b2177ec3a7d09f90bfaf
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: b54514b4f1a813a8000eb5c6269dcb8e5fb69ccf
+PODFILE CHECKSUM: 9c4cc2f19a5917cff1d4a4c27ac6d9db2fec2ba6
 
 COCOAPODS: 1.9.1

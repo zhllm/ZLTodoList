@@ -19,7 +19,7 @@ class ViewController1: UIViewController {
     override func viewDidLoad() {
         userName = RoundTextFiled(placeholder: "请输入您的用户名", isPass: false)
         password = RoundTextFiled(placeholder: "请输入您的密码", isPass: true)
-        loginButton = RoundUIButton(title: "登陆")
+        loginButton = RoundUIButton(title: "登陆", borderWidth: nil, textColor: .black)
         
         self.view.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(closeInput))

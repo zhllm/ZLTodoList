@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var isFirstIn: Bool = true
+    var isFirstIn: Bool = false
     var isLogin = true
     
     
@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if isFirstIn {
             self.window?.rootViewController = UINavigationController(rootViewController: WelcomViewController())
         } else if !isLogin {
+            print("LoginViewController") // LoginUpViewController
             self.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         } else {
             self.window?.rootViewController = UINavigationController(rootViewController: MainTabViewController())
