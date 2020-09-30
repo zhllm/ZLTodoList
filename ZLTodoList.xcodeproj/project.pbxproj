@@ -21,6 +21,9 @@
 		2F5E933F24B20620000DD3D6 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E933E24B20620000DD3D6 /* BindingExtensions.swift */; };
 		2F5E934124B2113F000DD3D6 /* DefaultImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E934024B2113F000DD3D6 /* DefaultImplement.swift */; };
 		2F66E95D24BCA7CC001A4AD9 /* ZLDiscoverViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66E95C24BCA7CC001A4AD9 /* ZLDiscoverViewController2.swift */; };
+		2F8BC03124E439DD00B36C20 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BC03024E439DD00B36C20 /* CollectionViewCell.swift */; };
+		2F8BC03324E43B6400B36C20 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BC03224E43B6400B36C20 /* CollectionReusableView.swift */; };
+		2F8BC03524E57A0800B36C20 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8BC03424E57A0800B36C20 /* SQLiteManager.swift */; };
 		2FB2F23424CF2535005812E4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2F23324CF2535005812E4 /* UserViewModel.swift */; };
 		2FB2F23624D04780005812E4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2F23524D04780005812E4 /* Operators.swift */; };
 		2FB5D5202494B81600BEC3F5 /* RoundUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D51F2494B81600BEC3F5 /* RoundUIButton.swift */; };
@@ -36,6 +39,9 @@
 		2FB5D5402496181A00BEC3F5 /* ZLMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D53F2496181A00BEC3F5 /* ZLMineViewController.swift */; };
 		2FB5D5422496182D00BEC3F5 /* ZLDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5412496182D00BEC3F5 /* ZLDiscoverViewController.swift */; };
 		2FB5D5442496183A00BEC3F5 /* ZLContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5D5432496183A00BEC3F5 /* ZLContactViewController.swift */; };
+		2FE4457024E0C328004856FC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4456F24E0C328004856FC /* UIColor+.swift */; };
+		2FE4457224E0C4B7004856FC /* collectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4457124E0C4B7004856FC /* collectionViewModel.swift */; };
+		2FE4457524E0C70D004856FC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4457424E0C70D004856FC /* TableViewCell.swift */; };
 		2FF36B0524A0FEAC009D9329 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FF36B0024A0FEAC009D9329 /* Montserrat-SemiBold.ttf */; };
 		2FF36B0624A0FEAC009D9329 /* demo_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2FF36B0124A0FEAC009D9329 /* demo_index.html */; };
 		2FF36B0724A0FEAC009D9329 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FF36B0224A0FEAC009D9329 /* iconfont.ttf */; };
@@ -74,6 +80,9 @@
 		2F5E933E24B20620000DD3D6 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
 		2F5E934024B2113F000DD3D6 /* DefaultImplement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImplement.swift; sourceTree = "<group>"; };
 		2F66E95C24BCA7CC001A4AD9 /* ZLDiscoverViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLDiscoverViewController2.swift; sourceTree = "<group>"; };
+		2F8BC03024E439DD00B36C20 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		2F8BC03224E43B6400B36C20 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		2F8BC03424E57A0800B36C20 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		2FB2F23324CF2535005812E4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2FB2F23524D04780005812E4 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		2FB5D51F2494B81600BEC3F5 /* RoundUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUIButton.swift; sourceTree = "<group>"; };
@@ -89,6 +98,9 @@
 		2FB5D53F2496181A00BEC3F5 /* ZLMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMineViewController.swift; sourceTree = "<group>"; };
 		2FB5D5412496182D00BEC3F5 /* ZLDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLDiscoverViewController.swift; sourceTree = "<group>"; };
 		2FB5D5432496183A00BEC3F5 /* ZLContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLContactViewController.swift; sourceTree = "<group>"; };
+		2FE4456F24E0C328004856FC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		2FE4457124E0C4B7004856FC /* collectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewModel.swift; sourceTree = "<group>"; };
+		2FE4457424E0C70D004856FC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2FF36B0024A0FEAC009D9329 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../shop/assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		2FF36B0124A0FEAC009D9329 /* demo_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = demo_index.html; path = ../../../shop/assets/fonts/demo_index.html; sourceTree = "<group>"; };
 		2FF36B0224A0FEAC009D9329 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = iconfont.ttf; path = ../../../shop/assets/fonts/iconfont.ttf; sourceTree = "<group>"; };
@@ -154,6 +166,7 @@
 				2F3A03A8249A5F1200220CAE /* UIViewControllerExtension.swift */,
 				2FF894D224A5C15300F8AF17 /* UIImageExtension.swift */,
 				2FB2F23524D04780005812E4 /* Operators.swift */,
+				2FE4456F24E0C328004856FC /* UIColor+.swift */,
 			);
 			path = "扩展";
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB2F23324CF2535005812E4 /* UserViewModel.swift */,
+				2FE4457124E0C4B7004856FC /* collectionViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -229,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB5D5302495DE7100BEC3F5 /* ZLWindow.swift */,
+				2F8BC03424E57A0800B36C20 /* SQLiteManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -265,6 +280,7 @@
 		2FB5D537249617A200BEC3F5 /* 发现 */ = {
 			isa = PBXGroup;
 			children = (
+				2FE4457324E0C6EC004856FC /* views */,
 				2F400F9424B760EF00C1CEBF /* viewModel */,
 				2F400F9324B760E900C1CEBF /* 模型 */,
 				2F400F9024B7608F00C1CEBF /* 表格操作枚举 */,
@@ -321,6 +337,16 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2FE4457324E0C6EC004856FC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				2FE4457424E0C70D004856FC /* TableViewCell.swift */,
+				2F8BC03024E439DD00B36C20 /* CollectionViewCell.swift */,
+				2F8BC03224E43B6400B36C20 /* CollectionReusableView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		2FF36B3124A243A5009D9329 /* views */ = {
@@ -523,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB5D52A2495277600BEC3F5 /* LoginViewController.swift in Sources */,
+				2F8BC03324E43B6400B36C20 /* CollectionReusableView.swift in Sources */,
 				2FB5D5202494B81600BEC3F5 /* RoundUIButton.swift in Sources */,
 				2F3A03A9249A5F1200220CAE /* UIViewControllerExtension.swift in Sources */,
 				2FF8928824926C9E00F9C9D0 /* People.swift in Sources */,
@@ -531,7 +558,9 @@
 				2F3A03A2249A4D2C00220CAE /* UIColorExtension.swift in Sources */,
 				2FB5D5282495266600BEC3F5 /* WelcomViewController.swift in Sources */,
 				2FB5D52E249527E300BEC3F5 /* MainTabViewController.swift in Sources */,
+				2FE4457024E0C328004856FC /* UIColor+.swift in Sources */,
 				2FF89273248FE61F00F9C9D0 /* AppDelegate.swift in Sources */,
+				2FE4457224E0C4B7004856FC /* collectionViewModel.swift in Sources */,
 				2FB5D5342495FAF300BEC3F5 /* HttpDatas.swift in Sources */,
 				2FB5D5422496182D00BEC3F5 /* ZLDiscoverViewController.swift in Sources */,
 				2F3A03A7249A56F500220CAE /* UIFontExtension.swift in Sources */,
@@ -553,12 +582,15 @@
 				2F3A03AB249A612800220CAE /* ZLCollectionViewCell.swift in Sources */,
 				2F5E934124B2113F000DD3D6 /* DefaultImplement.swift in Sources */,
 				2FF8928F24928F8400F9C9D0 /* RoundTextFiled.swift in Sources */,
+				2FE4457524E0C70D004856FC /* TableViewCell.swift in Sources */,
 				2FF894D324A5C15300F8AF17 /* UIImageExtension.swift in Sources */,
 				2FF8928C24926DD500F9C9D0 /* PeopleViewController.swift in Sources */,
+				2F8BC03124E439DD00B36C20 /* CollectionViewCell.swift in Sources */,
 				2F5E933B24B1DD22000DD3D6 /* viewModel.swift in Sources */,
 				2FB5D5442496183A00BEC3F5 /* ZLContactViewController.swift in Sources */,
 				2FB2F23624D04780005812E4 /* Operators.swift in Sources */,
 				2FB5D53B249617E200BEC3F5 /* ZLWXViewController.swift in Sources */,
+				2F8BC03524E57A0800B36C20 /* SQLiteManager.swift in Sources */,
 				2F5E933F24B20620000DD3D6 /* BindingExtensions.swift in Sources */,
 				2FB5D5402496181A00BEC3F5 /* ZLMineViewController.swift in Sources */,
 			);

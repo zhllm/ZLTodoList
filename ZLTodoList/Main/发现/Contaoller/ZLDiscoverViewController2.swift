@@ -92,9 +92,233 @@ class ZLDiscoverViewController2: UIViewController {
     
     let countDownStopped = BehaviorRelay(value: true)
     
+    lazy var tableViewV: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.frame = CGRect(x: 0, y: 0, width: 80, height: UIScreen.main.bounds.height)
+        tableView.rowHeight = 55
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorColor = .clear
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        return tableView
+    }()
+    
+    lazy var flowLayout: UICollectionViewFlowLayout = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.minimumLineSpacing = 2
+        flowLayout.minimumInteritemSpacing = 2
+        // 分组头悬停
+        flowLayout.sectionHeadersPinToVisibleBounds = true
+        let itemWidth = (UIScreen.main.bounds.width - 80 - 4 - 4) / 3
+        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 30)
+        return flowLayout
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: CGRect(x: 2 + 80, y: 2 + 64, width: UIScreen.main.bounds.width - 80 - 4, height: UIScreen.main.bounds.height - 64 - 4), collectionViewLayout: self.flowLayout)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = .clear
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+        collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
+        return collectionView
+    }()
+    
+    /// 左侧tableView数据
+    var tableViewData = [String]()
+    /// 右侧collectionView数据
+    var collectionViewData = [[CollectionViewModel]]()
+    
+    /// 右侧collectionView当前是否正在向下滚动（即true表示手指向上滑动，查看下面内容）
+    var collectionViewIsScrollDown = true
+    /// 右侧collectionView垂直偏移量
+    var collectionViewLastOffsetY : CGFloat = 0.0
+    
+    func createTable() {
+        let sql = "CREATE TABLE IF NOT EXISTS User( \n" +
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, \n" +
+            "name TEXT, \n" +
+            "age INTEGER \n" +
+        "); \n"
+        let db = SQLiteManager.shareManager().db
+        if db.open() {
+            if db.executeUpdate(sql, withArgumentsIn: []) {
+                print("创建成功")
+            } else {
+                print("创建失败")
+            }
+        }
+        db.close()
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         self.view.backgroundColor = .white
+        for i in 1 ..< 15 {
+            self.tableViewData.append("分类\(i)")
+        }
+        
+        for _ in tableViewData {
+            var models = [CollectionViewModel]()
+            for i in 1 ..< 6 {
+                models.append(CollectionViewModel(name: "型号\(i)", picture: "Image"))
+            }
+            self.collectionViewData.append(models);
+        }
+        
+        view.addSubview(tableViewV)
+        view.addSubview(collectionView)
+        
+        tableViewV.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .none)
+        
+    }
+    
+    
+    
+}
+
+extension ZLDiscoverViewController2: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return collectionViewData[section].count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return tableViewData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        let model = collectionViewData[indexPath.section][indexPath.row]
+        cell.setData(model)
+        return cell
+    }
+    
+    
+    
+    //分区头尺寸
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 30)
+    }
+     
+    //返回自定义分区头
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind:
+            UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: "CollectionReusableView",
+            for: indexPath) as! CollectionReusableView
+        view.titleLabel.text = tableViewData[indexPath.section]
+        return view
+    }
+     
+    //分区头即将要显示时调用
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplaySupplementaryView view: UICollectionReusableView,
+                        forElementKind elementKind: String, at indexPath: IndexPath) {
+        //如果是由用户手动滑动屏幕造成的向上滚动，那么左侧表格自动选中该分区对应的分类
+        if !collectionViewIsScrollDown
+            && (collectionView.isDragging || collectionView.isDecelerating) {
+            tableViewV.selectRow(at: IndexPath(row: indexPath.section, section: 0),
+                                    animated: true, scrollPosition: .top)
+        }
+    }
+     
+    //分区头即将要消失时调用
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplayingSupplementaryView view: UICollectionReusableView,
+                        forElementOfKind elementKind: String, at indexPath: IndexPath) {
+        //如果是由用户手动滑动屏幕造成的向下滚动，那么左侧表格自动选中该分区对应的下一个分区的分类
+        if collectionViewIsScrollDown
+            && (collectionView.isDragging || collectionView.isDecelerating) {
+            tableViewV.selectRow(at: IndexPath(row: indexPath.section + 1, section: 0),
+                                animated: true, scrollPosition: .top)
+        }
+    }
+     
+    //视图滚动时触发（主要用于记录当前collectionView是向上还是向下滚动）
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if collectionView == scrollView {
+            collectionViewIsScrollDown = collectionViewLastOffsetY
+                < scrollView.contentOffset.y
+            collectionViewLastOffsetY = scrollView.contentOffset.y
+        }
+    }
+  
+    
+}
+
+
+
+extension ZLDiscoverViewController2: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableViewData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
+        cell.textLabel?.text = tableViewData[indexPath.row]
+        return cell        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        collectionViewScrolToTop(section: indexPath.row, animate: true)
+        tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .top, animated: true)
+        
+    }
+    
+    func collectionViewScrolToTop(section: Int, animate: Bool) {
+        let headerRect = collectionViewHeaderFrame(section: section)
+        let topOfHeader = CGPoint(x: 0, y: headerRect.origin.y - collectionView.contentInset.top)
+        collectionView.setContentOffset(topOfHeader, animated: animate)
+    }
+    
+    func collectionViewHeaderFrame(section: Int) -> CGRect {
+        let indexPaht = IndexPath(item: 0, section: section)
+        let attributes = collectionView.collectionViewLayout.layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: indexPaht)
+        guard let frameForFistCell = attributes?.frame else {
+            return .zero
+        }
+        return frameForFistCell
+        
+    }
+    
+}
+
+
+typealias CallBackVoid = () -> Void
+typealias CallBackParams = (CallBackVoid) -> Void
+typealias CallBackDouble = (Int, String) -> CallBackParams
+
+
+extension ZLDiscoverViewController2{
+    
+    func startTimer() {
+        countDownStopped.accept(false)
+        
+        Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+            .takeUntil(countDownStopped.asObservable().filter{ $0 })
+            .subscribe {event in
+                self.leftTime.accept(self.leftTime.value - 1)
+                if self.leftTime.value == 0 {
+                    self.countDownStopped.accept(true)
+                    self.leftTime.accept(180)
+                }
+        }.disposed(by: dispose)
+    }
+    
+    func tf1() {
         let chartWidth = self.view.frame.size.width;
         let chartHeight = self.view.frame.size.height;
         let aaChartView = AAChartView()
@@ -127,31 +351,7 @@ class ZLDiscoverViewController2: UIViewController {
         
         // 图表视图对象调用图表模型对象,绘制最终图形
         aaChartView.aa_drawChartWithChartModel(chartModel)
-        
     }
-    
-    
-    func startTimer() {
-        countDownStopped.accept(false)
-        
-        Observable<Int>.interval(1, scheduler: MainScheduler.instance)
-            .takeUntil(countDownStopped.asObservable().filter{ $0 })
-            .subscribe {event in
-                self.leftTime.accept(self.leftTime.value - 1)
-                if self.leftTime.value == 0 {
-                    self.countDownStopped.accept(true)
-                    self.leftTime.accept(180)
-                }
-        }.disposed(by: dispose)
-    }
-}
-
-typealias CallBackVoid = () -> Void
-typealias CallBackParams = (CallBackVoid) -> Void
-typealias CallBackDouble = (Int, String) -> CallBackParams
-
-
-extension ZLDiscoverViewController2{
     
     func test12() {
         tableView = UITableView()

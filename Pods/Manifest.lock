@@ -2,6 +2,9 @@ PODS:
   - AAInfographics (5.0.1)
   - Alamofire (4.9.1)
   - Differentiator (4.0.1)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - MJRefresh (3.4.1)
   - Realm (4.4.0):
     - Realm/Headers (= 4.4.0)
@@ -24,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
   - Alamofire (~> 4.0)
+  - FMDB
   - MJRefresh
   - RealmSwift
   - RxCocoa (~> 5.0)
@@ -36,6 +40,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Differentiator
+    - FMDB
     - MJRefresh
     - Realm
     - RealmSwift
@@ -59,6 +64,7 @@ SPEC CHECKSUMS:
   AAInfographics: 4f95dfdeb1a1642ab26365b9b40b83693eb5b83d
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   MJRefresh: 3153c59a363159092c08b2177ec3a7d09f90bfaf
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
@@ -69,6 +75,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 9c4cc2f19a5917cff1d4a4c27ac6d9db2fec2ba6
+PODFILE CHECKSUM: e6e3e01d8d42d31bb861aa42cad5a3d9f5b60fe4
 
 COCOAPODS: 1.9.1

@@ -14,7 +14,7 @@ class MainTabViewController: UITabBarController {
     // ZLWXViewController
     private func addControllers(){
         
-        self.addChildControllers(ZLDiscoverViewController2(), title: "发现", image: "icons-twitter", selectImg: "icons-twitter")
+        self.addChildControllers(ZLDiscoverViewController(), title: "发现", image: "icons-twitter", selectImg: "icons-twitter")
         // ZLWXViewController ZLWXMainViewController
         self.addChildControllers(ZLContactViewController(), title: "通讯录", image: "icons-google", selectImg: "icons-google")
         self.addChildControllers(ZLWXMainViewController(), title: "微信", image: "icons-facebook", selectImg: "icons-facebook")
